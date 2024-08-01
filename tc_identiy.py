@@ -1,3 +1,5 @@
+# TC kimlik numarası kontrolü için algoritma
+
 def tcNumCheck(tcnum):
     validTc = False
     if len(tcnum) != 11:
@@ -11,17 +13,13 @@ def tcNumCheck(tcnum):
         weirdsum = (evens*7-odds)%10
         toplam10 = (sum(int(tcnum[i]) for i in range(10)))%10
 
-        if weirdsum != int(tcnum[9]): 
+        if weirdsum != int(tcnum[9]) or toplam10 != int(tcnum[10]): 
             print("Geçersiz TCKN.")
-            print(evens,"\n",odds,"\n",weirdsum,"\n",toplam10)
-        elif toplam10 != int(tcnum[10]):
-            print("Geçersiz TCKN.")
+            #print(evens,"\n",odds,"\n",weirdsum,"\n",toplam10)
         else:
             validTc = True
     
     return validTc
-
-
 
 
 if __name__ == "__main__":
