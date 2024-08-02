@@ -9,6 +9,6 @@ def primeCheck(number):
 
 if __name__ == "__main__":
     while True:
-        number = int(input("Enter the # : "))
+        number = int(input("Enter the #: "))
         print(primeCheck(number))
         if number == 0: break
